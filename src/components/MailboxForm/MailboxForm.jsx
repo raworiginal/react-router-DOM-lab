@@ -29,6 +29,7 @@ const MailboxForm = (props) => {
 					type="text"
 					name="boxOwner"
 					id="boxOwner"
+					required
 					onChange={handleChange}
 					value={formData.boxOwner}
 				/>

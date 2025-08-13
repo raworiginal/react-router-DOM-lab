@@ -11,6 +11,21 @@ const initialMailboxes = [
 		boxSize: "Small",
 		boxOwner: "Alex",
 	},
+	{
+		_id: 2,
+		boxSize: "Medium",
+		boxOwner: "Steve",
+	},
+	{
+		_id: 3,
+		boxSize: "Large",
+		boxOwner: "Bobby",
+	},
+	{
+		_id: 4,
+		boxSize: "Small",
+		boxOwner: "Max",
+	},
 ];
 const App = () => {
 	const [mailboxes, setMailboxes] = useState(initialMailboxes);
@@ -41,6 +56,7 @@ const App = () => {
 					path="/mailboxes/:mailboxId"
 					element={<MailboxDetails mailboxes={mailboxes} />}
 				/>
+				<Route path="*" element={<h2>Whoops, nothing here!</h2>} />
 			</Routes>
 		</>
 	);

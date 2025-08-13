@@ -5,6 +5,9 @@ const MailboxDetails = (props) => {
 	const mailbox = props.mailboxes.find((box) => {
 		return box._id === Number(mailboxId);
 	});
+	if (!mailbox) {
+		return <h1>Mailbox not Found!</h1>;
+	}
 	return (
 		<>
 			<h1>Mailbox {mailbox._id}</h1>
